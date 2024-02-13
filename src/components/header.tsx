@@ -4,10 +4,10 @@ import colors from 'tailwindcss/colors';
 
 type HeaderProps={
   title: string
-  cartQantityItems?: number
+  cartQuantityItems?: number
 }
 
-export function Header({ title, cartQantityItems = 0 }: HeaderProps) {
+export function Header({ title, cartQuantityItems = 0 }: HeaderProps) {
   return (
     <View className='flex-row items-center border-b border-slate-700 pb-5 mx-5'>
       <View className='flex-1'>
@@ -16,10 +16,10 @@ export function Header({ title, cartQantityItems = 0 }: HeaderProps) {
       </View>
 
       {
-        cartQantityItems > 0 &&
+        cartQuantityItems > 0 &&
         <TouchableOpacity className='relative' activeOpacity={0.7}>  
           <View className='bg-lime-300 w-5 h-5 rounded-full items-center justify-center top-2 z-10 -right-3.5'>
-            <Text className='text-slate-900 font-bold text-xs'>{cartQantityItems}</Text>
+            <Text className='text-slate-900 font-bold text-xs'>{cartQuantityItems}</Text>
           </View>
 
           <Feather name='shopping-bag' color={colors.white} size={24} />
